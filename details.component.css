@@ -1,0 +1,143 @@
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+  .container {
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(65, 0, 0, 0.446);
+  }
+  h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  p {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  .campaign-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .left-half {
+    flex: 1;
+    padding-right: 20px;
+  }
+  .right-half {
+    max-width: 300px;
+    flex: 1;
+    padding-left: 20px;
+    box-shadow: 0 0 20px rgba(65, 0, 0, 0.446);
+  }
+  .campaign-description {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+  .campaign-description h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .fundraiser-details h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .donation-form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  .form-group {
+    margin-bottom: 20px;
+  }
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  .form-group input[type="number"] {
+    width: 90%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  .form-group button {
+    padding: 10px 20px;
+    background-color: #700;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .form-group button:hover {
+    background-color: rgb(128, 35, 35);
+  }
+
+
+  /* /////////////////////////// */
+
+  .circular-progress-container {
+    margin-top: 5px;
+    margin-bottom: 25px;
+    width: 100px; 
+    height: 100px;
+    position: relative;
+  }
+  
+  .circular-progress {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
+  .circle {
+    width: 100%;
+    height: 100%;
+    border: 10px solid #f0f0f0; /* Adjust border thickness as needed */
+    border-radius: 50%;
+    position: absolute;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+  }
+  
+  .mask,
+  .fill {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    clip: rect(0px, 75px, 150px, 0px);
+    transform: rotate(0deg);
+  }
+  
+  .mask {
+    clip: rect(0px, 150px, 150px, 75px);
+  }
+  
+  .fill {
+    background-color: #700;
+    clip: rect(0px, 75px, 150px, 0px);
+    border-radius: 50%;
+  }
+  
+  .progress {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 10px solid transparent;
+    border-top-color: #007bff;
+    border-right-color: #007bff;
+    position: absolute;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+  }
+  

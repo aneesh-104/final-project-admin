@@ -1,0 +1,54 @@
+<div class="container">
+  <h1>Campaign Details</h1>
+  <div class="campaign-details">
+    <div class="left-half">
+      <div class="campaign-description">
+
+        <h2>{{ campaign.title }}</h2>
+        <p>{{ campaign.description }}</p>
+        <p>{{ campaign.current_amount }}</p>
+
+        <p>Start Date: {{ campaign.start_date }}</p>
+        <p>End Date: {{ campaign.end_date }}</p>
+      </div>
+      <div class="fundraiser-details">
+        <h2>Fundraiser Details</h2>
+        <p>Cause: {{ campaign.cause }}</p>
+        <p>Beneficiary Name: {{ campaign.beneficiary_name }}</p>
+        <p>Beneficiary Age: {{ campaign.beneficiary_age }}</p>
+        <p>Beneficiary City: {{ campaign.beneficiary_city }}</p>
+        <p>Beneficiary Mobile: {{ campaign.beneficiary_mobile }}</p>
+      </div>
+    </div>
+    <div class="right-half">
+      <div class="donation-form">
+        <h2>Make a Donation</h2>
+        <form (ngSubmit)="donate()">
+          <div class="form-group">
+            <label for="donationAmount">Amount:</label>
+            <input type="number" id="donationAmount" name="donationAmount" placeholder="Enter donation amount" required [(ngModel)]="donationAmount">
+          </div>
+          <div class="form-group">
+            <button type="submit">Donate</button>
+          </div>
+        </form>
+      </div>
+
+
+
+
+      <div class="circular-progress-container">
+        
+        <div class="circular-progress">
+          <div class="progress" [style.transform]="'rotate(' + (campaign.current_amount / campaign.goal_amount * 360) + 'deg)'"></div>
+          <div class="circle"></div>
+        </div>
+        <p> {{ campaign.current_amount }}  {{ campaign.goal_amount }}</p>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+
